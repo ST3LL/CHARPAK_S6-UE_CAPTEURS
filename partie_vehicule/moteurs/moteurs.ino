@@ -34,3 +34,45 @@ void backward(){
   digitalWrite(pinI2,HIGH);
   digitalWrite(pinI1,LOW);
 }
+
+void left()// {
+//Turn Left
+analogWrite(speedpinA,spead);
+analogWrite(speedpinB,spead);
+digitalWrite(pinI4,HIGH);
+digitalWrite(pinI3,LOW);
+digitalWrite(pinI2,HIGH);
+digitalWrite(pinI1,LOW); }
+
+
+void right()// {
+//Turn Right
+analogWrite(speedpinA,spead);
+analogWrite(speedpinB,spead);
+digitalWrite(pinI4,LOW);
+digitalWrite(pinI3,HIGH);
+digitalWrite(pinI2,LOW);
+digitalWrite(pinI1,HIGH); }
+
+
+void stop()// {
+//Stop the motors
+digitalWrite(speedpinA,LOW);
+digitalWrite(speedpinB,LOW);
+delay(1000); }
+
+
+void loop() {
+left();
+delay(2000);
+stop();
+right();
+delay(2000);
+stop();
+// delay(2000);
+forward();
+delay(2000);
+stop();
+backward();
+delay(2000);
+stop(); }
